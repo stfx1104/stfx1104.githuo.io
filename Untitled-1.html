@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: url('https://cdn.discordapp.com/attachments/1285644827911782503/1337609785100472464/2825711.gif?ex=67a811b0&is=67a6c030&hm=630a73b12b99344d0d1ca889004a4d264042191d69d9c79183106406c85c641f&') no-repeat center center/cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .carousel {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .carousel-track {
+            display: flex;
+            width: 1000%; /* 10 รูป */
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .music-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .music-button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="music-button" onclick="toggleMusic()">🎵 เปิด/ปิดเพลง</button>
+    <div class="container">
+        <h1>Happy Anniversary 0.3</h1>
+        <p>Happy Anniversary. Thank you for showing me what true love looks like!
+        </p>
+        <div class="carousel">
+            <div class="carousel-track" id="carousel-track">
+                <img src="https://cdn.discordapp.com/attachments/1285644827911782503/1337620704161697842/8f3810fa-12a3-41e1-a4c6-2812cb478678.jfif?ex=67a81bdb&is=67a6ca5b&hm=d0a024be32b0f201b209248cd825efe91790337db0542ab6a2cac031c0ccf710&" alt="รูป 1">
+                <img src="https://cdn.discordapp.com/attachments/1285644827911782503/1337355248875995179/quality_restoration_25680203000738886.jpg?ex=67a7cd62&is=67a67be2&hm=e818b553c16c45adeab7d9e5a505d6c1691a4429ae96f4d7a4ba69b126aaf078&" alt="รูป 2">
+                <img src="https://cdn.discordapp.com/attachments/1285644827911782503/1337355226637926433/IMG_4849.png?ex=67a7cd5c&is=67a67bdc&hm=312b999b585c241470bb837ec2ebc167455aad6a3318ba1bf530a42817789e37&" alt="รูป 3">
+                <img src="https://cdn.discordapp.com/attachments/1285644827911782503/1337355021725073439/quality_restoration_25680206215608234.jpg?ex=67a7cd2c&is=67a67bac&hm=d3267b16d8c355a5badd2cd39b6010d47e683306c2bc1014d4772dd78dee20ee&" alt="รูป 4">
+                <img src="https://cdn.discordapp.com/attachments/1303017805221986346/1330886003422007316/IMG_4762.jpg?ex=67a7ff6d&is=67a6aded&hm=974538b284349ea13c8102d6485a4f44315aaf57a22cc9364fa0d1b76bcc850c&" alt="รูป 5">
+                <img src="https://cdn.discordapp.com/attachments/1303017805221986346/1330515572311720067/2025-01-19_193127.png?ex=67a7f7f0&is=67a6a670&hm=e09df44eca1c4e1707234e30c12ce2cab4020ad9e43a2626d940c801fa104689&" alt="รูป 6">
+                <img src="https://cdn.discordapp.com/attachments/1303017805221986346/1330162441962913902/image.png?ex=67a8008f&is=67a6af0f&hm=9a2120152414a3e13e373836177c16559f8cedf9a5a52516f1b03ce1f13ee35f&" alt="รูป 7">
+                <img src="https://cdn.discordapp.com/attachments/1303017805221986346/1329426593713492030/image.png?ex=67a7f63f&is=67a6a4bf&hm=1648f3c86edef003a4b6eb6c4d1eb522948fcee1758aa8fbe98b80c5ba4e1dec&" alt="รูป 8">
+                <img src="https://cdn.discordapp.com/attachments/1303017805221986346/1316437649950769223/image.png?ex=67a78299&is=67a63119&hm=c5087f5d8db416bf0e50b386658866c1261cd395c01499c5ad741c63c995ee97&" alt="รูป 9">
+                <img src="https://cdn.discordapp.com/attachments/1285644827911782503/1309172087012724837/image.png?ex=67a77204&is=67a62084&hm=7bcc6112b3a13bd0642750a905b6eb095d0f1728baa8c7a066e0528cb250eb99&" alt="รูป 10">
+            </div>
+        </div>
+    </div>
+    <audio id="bg-music" autoplay loop>
+        <source src="https://cdn.discordapp.com/attachments/1285644827911782503/1337601871384416296/Violette_Wautier_-_This_Time___Mutual_Bar_Live_Session.mp3?ex=67a80a51&is=67a6b8d1&hm=805602da2615c02c2431411fea83f340ffd80747bf9a65bdb097a711c193c6a4&" type="audio/mpeg">
+    </audio>
+    <script>
+        var music = document.getElementById("bg-music");
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+        let currentIndex = 0;
+        function moveCarousel() {
+            const track = document.getElementById("carousel-track");
+            currentIndex = (currentIndex + 1) % 10;
+            track.style.transform = `translateX(-${currentIndex * 300}px)`;
+        }
+        setInterval(moveCarousel, 3000); 
+    </script>
+</body>
+</html>
